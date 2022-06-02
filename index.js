@@ -1,12 +1,14 @@
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
+// navigation transition
+const mob_nav = document.querySelector(".mobile-navbar-btn");
+const nav_header = document.querySelector(".header");
+
+mob_nav.addEventListener('click', () => toggleNavbar());
+
+const toggleNavbar = () => {
+    nav_header.classList.toggle("active");
 }
+
+
 
 // content songs playing pausing fuctionality
 const mySong = document.getElementById('mySong');
